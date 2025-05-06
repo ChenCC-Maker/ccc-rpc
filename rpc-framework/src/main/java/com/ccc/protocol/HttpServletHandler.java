@@ -17,8 +17,7 @@ public class HttpServletHandler {
      */
     public void handle(HttpServletRequest request, HttpServletResponse response) throws Exception {
         // Step1：解析request对象，获取请求体内容
-        Invocation invocation;
-        invocation = (Invocation) new ObjectInputStream(request.getInputStream()).readObject();
+        Invocation invocation = (Invocation) new ObjectInputStream(request.getInputStream()).readObject();
 
         String interFaceName = invocation.getInterFaceName();
         String methodName = invocation.getMethodName();

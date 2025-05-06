@@ -10,7 +10,7 @@ import org.apache.catalina.startup.Tomcat;
 
 public class HttpServer {
     public void start(String hostName, int port) throws LifecycleException {
-//        // 获取Tomcat实例
+        // 获取Tomcat实例
         Tomcat tomcat = new Tomcat();
         Server server = tomcat.getServer();
         Service service = server.findService("Tomcat");
